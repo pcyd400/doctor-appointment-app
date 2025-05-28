@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^bk8=o-^yba2b#u5ej&_k)yv8x_7c^==yieh4t*5wy57v8r-14'
+SECRET_KEY = ' ' #please add your own secret key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -138,11 +138,11 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+#configure the mail server from here
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'pcyd900@gmail.com'  # Your email address
-EMAIL_HOST_PASSWORD = 'knli gsed xecz qdbg'  # Your email app password
-EMAIL_RECEIVER = 'pcyd900@gmail.com'  # Email to receive contact messages
+EMAIL_HOST_USER = ''  # Your email address
+EMAIL_HOST_PASSWORD = ''  # Your email app password
+EMAIL_RECEIVER = ''  # Email to receive contact messages
