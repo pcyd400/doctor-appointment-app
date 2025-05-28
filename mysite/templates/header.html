@@ -1,0 +1,32 @@
+ <section>
+            <nav class=" navbar has-shadow is-fixed-top">
+                <div class="navbar-brand">
+                    <a href="{% url 'home' %}">
+
+                      <img src="/static/image/logo.svg" alt="logo" style="width:60px; height: 60px; margin-left: 15px; margin-right: 10px;">
+                    </a>
+                    <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" id="burger">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                      </a>
+
+                </div>
+                <div class="navbar-menu" id="nav-links" >
+                  <div class="navbar-start" style="margin-left:10px;">
+                    <a href="{% url 'home' %}" class="navbar-item">Home</a>
+                    <a  href="{% url 'about'%}" class="navbar-item">About</a>
+                    <a href="{% url 'contact'%}" class="navbar-item">Contact</a>
+                    <a href="{% url 'appointment'%}" class="navbar-item">Appointment</a>
+                </div>
+                    </div>
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <!-- Emergency button  -->
+                            <a href="{% url 'emergency' %}" class="button is-danger is-responsive pulsing-button" style="padding: 6px;">Emergency</a>
+                        </div>
+
+                    </div>
+            </nav>
+        </section>

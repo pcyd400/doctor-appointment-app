@@ -1,0 +1,33 @@
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Success | e-Doctor</title>
+        <link href="/static/css/bulma.min.css" rel="stylesheet">
+        <link href="/static/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+       {% include 'header.html'%}
+
+        <section class="section" style="margin-top:160px;">
+            <div class="container has-text-centered">
+                <!-- Thank you Image Section -->
+                <figure class="image is-128x128 is-inline-block zoom">
+                    <img src="/static/image/thanks_for_contacting.svg" alt="Thank You Image" class="is-responsive">
+                </figure>
+
+                <!-- Success Message -->
+                <h1 class="title is-5-mobile is-2-tablet is-1-desktop" style="margin-top: 20px;">Thank You for Contacting Us!</h1>
+                <p class="subtitle is-6-mobile is-4-tablet is-3-desktop">Dear {{name}} your message has been successfully received. Our team will get back to you shortly.</p>
+
+                <!-- Return Button -->
+                <div style="margin-top: 30px;">
+                    <a href="{% url 'home' %}" class="button is-primary is-medium is-rounded is-fullwidth-mobile">Return to Home</a>
+                </div>
+            </div>
+        </section>
+
+
+        {% include 'footer.html' %}
+    </body>
+</html>

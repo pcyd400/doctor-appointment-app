@@ -1,0 +1,227 @@
+<html lang ="eng">
+    <head> 
+        <meta charset="UTF-8">
+        <meta  name="viewport"  width="device-width initial-scale=1.0">
+        <title>Welcome to e-Doctor | Your Health, Your Time</title>
+        <link href="/static/css/bulma.min.css" rel="stylesheet">
+        <link href="/static/css/style.css" rel="stylesheet">
+        
+    </head>
+    <body>
+    <!--header-->
+    {% include 'header.html' %}
+
+        <section>
+            <div class="columns">
+                <div class="column">
+                    <video class="is-responsive is-flex-shrink-0" width="510px" height="510px" loop autoplay muted style="margin-top:160px;">
+                        <source src="/static/media/home_animation.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="column is-8" style="margin-top:160px;">
+                       <h1 class="is-size-3-tablet is-size-5-mobile index_title ">Welcome to e-Doctor — Your Health, Your Time</h1>
+                       <div class="box">
+                            <p class="has-text-centered is-size-6-desktop is-size-6-tablet is-size-7-mobile index_paragraph">At e-Doctor,we understand that your time is valuable,
+                            and your health is priceless.
+                            That's why we’ve made it simple and convenient to connect 
+                            with healthcare professionals from the comfort of your home.
+                            Whether you're looking for a routine check-up, need urgent care,
+                            or want to consult with a specialist,
+                             our platform allows you to book your appointment online in just a few easy steps.</p>
+                        </div>
+                        <div class="button is-primary is-responsive is-rounded learn_more_button_desktop is-hidden-touch"><a href="{% url 'about' %}">Learn more..</a></div>
+                        <div class="button is-primary is-responsive is-rounded learn_more_button_tablet is-hidden-desktop is-hidden-mobile"><a href="{% url 'about' %}">Learn more..</a></div>
+                        <div class="button is-primary is-responsive is-rounded learn_more_button_mobile is-hidden-desktop is-hidden-tablet"><a href="{% url 'about' %}">Learn more..</a></div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Circular Progress Bar Section -->
+
+<section style="margin-top: 60px;">
+    <div class="fixed-grid has-10-cols has-6-cols-mobile" style="margin-left: 60px;">
+
+        <div class="grid">
+            <div class="cell is-col-span-2 is-hidden-mobile">
+
+            </div>
+                <div class="cell is-col-span-2">
+                    <div class="circular-progress" id="emergencyResponses" style="--progress: 50;">
+                    <span class="progress-value">90%</span>
+                </div>
+                <p class="has-text-weight-semibold is-size-7-mobile" style="margin-top: 10px;">Emergency Responses</p>
+                 </div>
+          <div class="cell is-col-span-2">
+                <div class="circular-progress" id="patientsTreated" style="--progress: 75;">
+                    <span class="progress-value">80%</span>
+                </div>
+                <p class="has-text-weight-semibold is-size-7-mobile" style="margin-top: 10px;">Patients Treated</p>
+          </div>
+          <div class="cell is-col-span-2">
+
+                <div class="circular-progress" id="doctorRating" style="--progress: 90;">
+                    <span class="progress-value">4.5/5</span>
+                </div>
+                <p class="has-text-weight-semibold is-size-7-mobile" style="margin-top: 10px;">Doctor Service Rating</p>
+          </div>
+          <div class="cell is-col-span-2 is-hidden-mobile">
+
+          </div>
+        </div>
+      </div>
+</section>
+
+        <section>
+            <div class="columns" style="margin-top: 125px;">
+                <div class="column is-4">
+                    <!--card content here -->
+                    <div class="card">
+                        <div class="card-image">
+                          <figure class="image is-4by3 zoom">
+                            <img
+                              src="/static/image/doctor_cimage.svg"
+                              alt="Placeholder image"
+                            />
+                          </figure>
+                        </div>
+                        <div class="card-content">
+                          <div class="media">
+                            <div class="media-left">
+                              <figure class="image is-48x48">
+                                <img
+                                  src="/static/image/user.png"
+                                  alt="Placeholder image"
+                                />
+                              </figure>
+                            </div>
+                            <div class="media-content">
+                              <p class="title is-4">Ramesh</p>
+                              <p class="subtitle is-6">@meRamesh</p>
+                            </div>
+                          </div>
+                      
+                          <div class="content">
+                            "Doctor is excellent! He was there on appointment day, very professional!"
+                             <a href="#">#ProfessionalDoctor</a>
+                            <br />
+                            <time datetime="2016-1-1">11:09 PM - 20 Dec 2024</time>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <!--patient card-->
+                <div class="column is-4">
+                    <!--card content here -->
+                    <div class="card">
+                        <div class="card-image">
+                          <figure class="image is-4by3 zoom">
+                            <img
+                              src="/static/image/patient_cimage.svg"
+                              alt="Placeholder image"
+                            />
+                          </figure>
+                        </div>
+                        <div class="card-content">
+                          <div class="media">
+                            <div class="media-left">
+                              <figure class="image is-48x48">
+                                <img
+                                  src="/static/image/user.png"
+                                  alt="Placeholder image"
+                                />
+                              </figure>
+                            </div>
+                            <div class="media-content">
+                              <p class="title is-4">Roshan</p>
+                              <p class="subtitle is-6">@iRoshan</p>
+                            </div>
+                          </div>
+                      
+                          <div class="content">
+                            "Very benifitial for patients, we alsays wanted this kind of service."<a href="#">#PatientFriendly</a>
+                            <br />
+                            <time datetime="2016-1-1">11:11 PM - 24 Dec 2024</time>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <!--appointment card-->
+                <div class="column is-4">
+                    <!--card content here -->
+                    <div class="card">
+                        <div class="card-image">
+                          <figure class="image is-4by3 zoom">
+                            <img
+                              src="/static/image/appointment_cimage.svg"
+                              alt="Placeholder image"
+                            />
+                          </figure>
+                        </div>
+                        <div class="card-content">
+                          <div class="media">
+                            <div class="media-left">
+                              <figure class="image is-48x48">
+                                <img
+                                  src="/static/image/user.png"
+                                  alt="Placeholder image"
+                                />
+                              </figure>
+                            </div>
+                            <div class="media-content">
+                              <p class="title is-4">Prabhu</p>
+                              <p class="subtitle is-6">@Prabhu1</p>
+                            </div>
+                          </div>
+                      
+                          <div class="content">
+                            "Booking an appointment was so easy! The process was quick and hassle-free!".<a href="#">#Easypeasy</a>
+                            <br />
+                            <time datetime="2016-1-1">9:09 PM - 6 Dec 2024</time>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <!--queue card-->
+                <div class="column is-4">
+                    <!--card content here -->
+                    <div class="card">
+                        <div class="card-image">
+                          <figure class="image is-4by3 zoom">
+                            <img
+                              src="/static/image/queue_cimage.svg"
+                              alt="Placeholder image"
+                            />
+                          </figure>
+                        </div>
+                        <div class="card-content">
+                          <div class="media">
+                            <div class="media-left">
+                              <figure class="image is-48x48">
+                                <img
+                                  src="/static/image/user.png"
+                                  alt="Placeholder image"
+                                />
+                              </figure>
+                            </div>
+                            <div class="media-content">
+                              <p class="title is-4">Sanjay</p>
+                              <p class="subtitle is-6">@meSanjay</p>
+                            </div>
+                          </div>
+                      
+                          <div class="content">
+                            "I never thought that phone in my pocket can save so much time, avoided queue."<a href="#">#TimeSaver</a>
+                            <br />
+                            <time datetime="2016-1-1">7:07 PM - 28 Dec 2024</time>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+           <!--footer code from here-->
+           {% include 'footer.html' %}
+    <script src="/static/javascript/progress.js"></script>
+    </body>
+</html>

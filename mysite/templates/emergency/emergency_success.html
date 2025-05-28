@@ -1,0 +1,32 @@
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emergency | e-Doctor</title>
+        <link href="/static/css/bulma.min.css" rel="stylesheet">
+        <link href="/static/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'header.html' %}
+
+        <section class="section" style="margin-top:160px;">
+            <div class="container has-text-centered">
+                <!-- Appointment booked Image Section -->
+                <figure class="image is-128x128 is-inline-block zoom">
+                    <img src="/static/image/ambulence.png" alt="emergency call initiated image" class="is-responsive">
+                </figure>
+
+                <!-- Success Message -->
+                <p class="subtitle is-7-mobile is-4-tablet is-3-desktop"> Ambulence is on the way our team will contact you shortly</p>
+                <p class="subtitle is-7-mobile is-4-tablet is-3-desktop"> We will reach at {{loaction}}</p>
+
+                <!-- Return Button -->
+                <div style="margin-top: 30px;">
+                    <a href="{% url 'home' %}" class="button is-primary is-medium is-rounded is-fullwidth-mobile">Return to Home</a>
+                </div>
+            </div>
+        </section>
+
+       {% include 'footer.html'%}
+    </body>
+</html>

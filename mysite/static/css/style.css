@@ -1,0 +1,105 @@
+.index_title {
+    color: rgb(9, 213, 159);
+    text-shadow: 2px 2px 3px rgb(8, 77, 71);
+    text-align: center;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: width 5s;
+    
+  }
+
+  .index_paragraph{
+    margin-left:10px;
+    margin-right:10px;
+
+  }
+
+  .learn_more_button_desktop{
+    margin-left:341.5px;
+  }
+
+  .learn_more_button_tablet{
+    margin-left:310.5px;
+  }
+
+  .learn_more_button_mobile{
+    margin-left:206.5px;
+  }
+  .footer_icon{
+    width:30px; 
+    height: 30px;
+    margin-right:12px;
+    margin-bottom:-10px;
+  }
+
+  .learn_more_button_desktop:hover{
+    background-color: rgb(168, 255, 227);
+    width:200px;
+  }
+  /*zoom the images */
+  .zoom {
+    transition: transform .2s; /* Animation */
+  }
+  .zoom:hover {
+    transform: scale(1.2); 
+  }
+
+  /*zoom the card */
+  .zoom_card {
+    transition: transform .2s;
+  }
+
+  .zoom_card:hover{
+    transform: scale(1.09);
+  }
+
+  @keyframes pulse {
+  0% {
+    background-color: #ff0000; /* Red */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+  }
+  50% {
+    background-color: #e73939; /* Brighter Red */
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.7);
+  }
+  100% {
+    background-color: #ff0000; /* Back to original Red */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+  }
+}
+
+.pulsing-button {
+  animation: pulse 1.5s infinite;
+  color: rgb(255, 255, 255);
+}
+
+/* progress bar circular */
+.circular-progress {
+  --size: 120px;
+  --track-color: #f3f3f3;
+  --progress-color: #00d1b2;
+  --progress: 0;
+
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: conic-gradient(
+      var(--progress-color) calc(var(--progress) * 1%),
+      var(--track-color) 0
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-progress .progress-value {
+  position: absolute;
+  font-size: calc(var(--size) / 5);
+  font-weight: bold;
+}
+
+.circular-progress:hover{
+  --progress-color: #2989fe;
+}
+

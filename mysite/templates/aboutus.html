@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Learn More About e-Doctor</title>
+    <link href="/static/css/bulma.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- header navbar -->
+    {% include 'header.html' %}
+
+    <!-- About Us Hero Section -->
+    <section class="hero is-small is-primary is-bold is-hidden-mobile">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="is-size-5-tablet is-size-6-mobile is-family-primary" style="margin-top:60px;">
+                    Redefining healthcare with convenience, accessibility, and excellence.
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-small is-primary is-bold is-hidden-desktop is-hidden-tablet is-hidden-widescreen is-hidden-fullhd" style="padding-top: 50px;">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="is-size-5-tablet is-size-6-mobile is-family-primary" style="margin-top:60px;">
+                    Redefining healthcare with convenience, accessibility, and excellence.
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="zoom">
+                        <img src="/static/image/about_doctor.svg" alt="About Doctor">
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <h2 class="title is-size-4">Our Vision</h2>
+                    <p class="content">
+                        At e-Doctor, our mission is to transform healthcare by making it accessible, convenient, and patient-centric for everyone.
+                        We aim to empower individuals with innovative tools to manage their health seamlessly from the comfort of their homes.
+                        Our platform bridges the gap between patients and medical professionals by offering secure, reliable,
+                        and user-friendly solutions that simplify the healthcare journey.
+                        We are committed to ensuring that quality healthcare is not just a privilege but a fundamental right for all, irrespective of geographical, financial, or logistical constraints.
+                        By fostering a culture of compassion and innovation, we strive to promote health equity, enhance patient satisfaction, and build a healthier, more connected world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section has-background-light">
+        <div class="container">
+            <h2 class="title has-text-centered">Meet Our Team</h2>
+            <div class="columns is-centered is-multiline">
+                {% for member in team_members %}
+                <!-- Team Member Card -->
+                <div class="column is-3">
+                    <div class="card zoom_card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ member.photo.url }}" alt="{{ member.name }}">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title is-size-5">{{ member.name }}</h3>
+                            <p class="subtitle is-size-6">{{ member.position }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+</body>
+</html>

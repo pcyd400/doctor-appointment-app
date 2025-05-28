@@ -1,0 +1,40 @@
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment booked | e-Doctor</title>
+    <link href="/static/css/bulma.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body>
+   {% include 'header.html' %}
+
+    <section class="section" style="margin-top:160px;">
+        <div class="container has-text-centered">
+            <!-- Appointment booked Image Section -->
+            <figure class="image is-128x128 is-inline-block zoom">
+                <img src="/static/image/appointment_booked.svg" alt="Appointment booked image" class="is-responsive">
+            </figure>
+
+            <!-- Success Message -->
+            <h1 class="title is-5-mobile is-2-tablet is-1-desktop" style="margin-top: 20px;">Your Appointment is Booked!</h1>
+            <p class="subtitle is-6-mobile is-4-tablet is-3-desktop">Please be on time and bring any necessary documents.</p>
+
+            <!-- Display Appointment Details -->
+            <p class="is-size-5 is-7-mobile" style="margin-top: 20px;">
+                Your appointment has been successfully booked for {{ appointment.appointment_date }} at {{ appointment.appointment_time }}.
+            </p>
+            <p class="is-size-5 is-7-mobile">
+                Your unique appointment reference is: <strong>{{ appointment.slug }}</strong>
+            </p>
+
+            <!-- Return Button -->
+            <div style="margin-top: 30px;">
+                <a href="{% url 'home' %}" class="button is-primary is-medium is-rounded is-fullwidth-mobile">Return to Home</a>
+            </div>
+        </div>
+    </section>
+
+{% include 'footer.html' %}
+</body>
+</html>

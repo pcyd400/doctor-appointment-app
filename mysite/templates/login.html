@@ -1,0 +1,41 @@
+<!-- accounts/templates/accounts/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Access Your e-Doctor Account</title>
+    <link href="/static/css/bulma.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar header -->
+   {% include 'header.html' %}
+    <!-- Login Form -->
+    <section>
+        <div class="columns is-centered" style="margin-top: 120px; margin-bottom: 60px;">
+            <div class="column is-5">
+                <h1 class="title has-text-centered is-size-3-tablet is-size-5-mobile">Welcome Back!</h1>
+                <p class="has-text-centered is-size-5-tablet is-size-6-mobile">
+                    Log in to your account to access our platform.
+                </p>
+                <div class="box">
+                    <form method="post" action="{% url 'login' %}">
+                        {% csrf_token %}
+                        <div class="field has-text-centered">
+                            <button class="button is-primary is-rounded">Login</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="has-text-centered">
+                    <p class="is-size-6">Don’t have an account? <a href="{% url 'signup' %}" class="has-text-primary">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   {% include 'footer.html' %}
+</body>
+</html>

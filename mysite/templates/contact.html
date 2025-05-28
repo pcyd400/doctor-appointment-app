@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Get in Touch with e-Doctor Support</title>
+    <link href="/static/css/bulma.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navbar Section header -->
+    {% include 'header.html' %}
+
+
+    <!-- Contact Form Section -->
+    <section style="padding-top: 80px;">
+      <div class="columns" style="margin-top: 20px; margin-bottom: 60px; margin-left: 60px; margin-right: 60px;">
+        <div class="column is-8">
+          <div>
+            <h1 class="title has-text-centered is-size-3-tablet is-size-6-mobile">Get in Touch</h1>
+            <p class="has-text-centered is-size-5-tablet is-size-7-mobile">
+              Have questions or concerns? Fill out the form below and we'll get back to you.
+            </p>
+            <div class="box">
+              <form action="{% url 'contact' %}" method="POST">
+                 {% csrf_token %}
+                <div class="field">
+                  <label class="label">Name</label>
+                  <div class="control">
+                    <input class="input" type="text" name="name" placeholder="Enter your name" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control">
+                    <input class="input" type="email" name="email" placeholder="Enter your email" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Subject</label>
+                  <div class="control">
+                    <input class="input" type="text" name="subject" placeholder="Enter the subject">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Message</label>
+                  <div class="control">
+                    <textarea class="textarea" name="message" placeholder="Write your message" rows="5" required></textarea>
+                  </div>
+                </div>
+                <div class="field has-text-centered">
+                  <button type="submit" class="button is-primary is-rounded">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4 is-hidden-mobile">
+          <div class="zoom">
+          <img src="/static/image/conatc_us_ pic.svg" alt="Image of person" style="margin-top: 310px;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    {% include 'footer.html' %}
+  <script src="/static/javascript/contact.js"></script>
+  </body>
+</html>
